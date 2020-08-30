@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* border: 2px solid black; */
+    padding: 25px;
+    background: url(game3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container h1{
+    margin: auto;
+    text-align: center;
+    text-shadow: 2px 2px white;
+    font-size: 45px;
+}
+p.note{
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+#game{
+    height: 209px;
+    width: 500px;
+    border: 1px solid black;
+    /* margin: auto; */
+    width: 60%;
+    border: 3px solid #344422;
+    /* background-color: #afc993; */
+    /* background: linear-gradient(to bottom, #009933 0%, #e6ffcc 100%); */
+    padding-left: 25px;
+    margin-left: 20%;
+    margin-top: 0%;
+    /* opacity: 0.5; */
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    background-color: rgba(141, 187, 147, 0.7);
+}
+
+.container{
+    padding-left: 25px;
+    margin-left: 20%;
+    margin-top: 10%;
+    width: 60%;
+}
+
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: #009933;
+    position: relative;
+    /* Dont ask silly ques 150 kha se aya. upr dekh box ki height 
+    200 h or charater ki 50 */
+    top: 150px;
+    border: 1px solid #333300;
+    /* opacity: 1; */
+}
+
+/* Lets make our character jump */
+/* Since we want it to jump when we call a js function
+So this class add the animation jump. */
+.animate{
+    animation: jump 400ms ;
+}
+
+@keyframes jump{
+    /* Goes 30% up, stays there for a while and then return back  */
+    0%{top:150px;}
+    30%{top:100px;}
+    70%{top:100px;}
+    100%{top:150px;}
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: #333300;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    /* infinite times and please  be smooth and dont ask about linear.*/
+    animation: block 1.5s infinite ;
+    /* opacity: 1; */
+}
+@keyframes block{
+    0%{
+        left: 480px;
+    }
+    100%{
+        left: -40px;
+    }
+}
